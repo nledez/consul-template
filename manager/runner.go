@@ -694,7 +694,7 @@ func (r *Runner) runTemplate(tmpl *template.Template, runCtx *templateRunCtx) (*
 	if l := missing.Len(); l > 0 {
 		log.Printf("[DEBUG] (runner) missing data for %d dependencies", l)
 		for _, missingDependency := range missing.List() {
-			log.Printf("[DEBUG] (runner) missing dependency: %s", missingDependency)
+			log.Printf("[WARN] (runner) missing dependency: %s", missingDependency)
 		}
 	}
 
